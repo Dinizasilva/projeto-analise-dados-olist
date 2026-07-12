@@ -23,6 +23,12 @@ O projeto foca em indicadores operacionais:
 - `01_Criação_Camadas_Bronze_Silver.sql`: Scripts de preparação dos dados.
 - `02_Criação_Camada_Gold.sql`: Criação das tabelas consolidadas e da View analítica.
 - `03_Consultas_e_Analises.sql`: Consultas de exploração e verificação.
+- Markdown
+---
+
+### 📄 Documentação Técnica
+Para uma visão detalhada da arquitetura, modelagem dimensional e KPIs aplicados, acesse o documento abaixo:
+[📥 Visualizar Portfólio Técnico - Olist](Portfolio_Projeto_Olist_v2.pdf)
 
 ---
 *Projeto desenvolvido por Eliana Diniz Araújo e Silva como parte da construção de um portfólio de dados.*
