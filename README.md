@@ -17,6 +17,7 @@ Este projeto foi desenvolvido para demonstrar habilidades em engenharia e análi
 O projeto foca em indicadores operacionais:
 - Volume de Pedidos por Mês.
 - Distribuição Geográfica de Clientes por Estado.
+- ![Dashboard Olist](dashboard_olist.png)
 
 ## 📂 Organização dos Arquivos
 - `01_Criação_Camadas_Bronze_Silver.sql`: Scripts de preparação dos dados.
