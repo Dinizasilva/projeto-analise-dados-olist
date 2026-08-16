@@ -89,39 +89,70 @@ Esse foi meu **primeiro contato** com pipeline de dados. Na época eu não sabia
 Esse pipeline hoje está no Snowflake. Mas eu já sei como fazer isso na AWS. E vou fazer.
 
 
-### Arquitetura futura na AWS:
+### Arquitetura futura na AWS:(AWS Cloud Migration)
+
+Este diagrama ilustra o planejamento para a migração e modernização do pipeline de dados, utilizando os serviços nativos da AWS para escalar a análise de dados do projeto Olist.
+
+<p align="center">
+  <img src="aws-data-pipeline-architecture.png" alt="Arquitetura de Dados na AWS - Pipeline Olist" width="700">
+</p>
 
 
+### O que muda:
 
-## Objetivo
-Este projeto foi desenvolvido para demonstrar habilidades em engenharia e análise de dados, utilizando a arquitetura **Medallion** (Bronze, Silver, Gold) para processar dados de e-commerce e gerar indicadores de negócio (KPIs).
+| Hoje (Snowflake) | Futuro (AWS) | Por quê |
+|---|---|---|
+| Snowflake (storage + compute) | **S3** (storage) + **Lambda/Glue** (compute) | Mais controle, mais barato, mais Cloud-native |
+| SQL puro | **Python + SQL** no Glue | Transformações complexas ficam mais fáceis |
+| Power BI | **QuickSight** | Integração nativa com AWS, menos licença |
+| Snowflake Tasks | **EventBridge + Lambda** | Orquestração serverless, paga só pelo uso |
 
-## 🛠️ Tecnologias Utilizadas
+### O que eu já sei fazer na AWS (porque fiz nos labs):
+
+- **S3** — criar buckets, versionamento, lifecycle policies (fiz no lab S3)
+- **Lambda** — funções serverless (próximo passo)
+- **IAM** — roles e policies para acesso seguro entre serviços (fiz em todos os labs)
+- **EventBridge** — orquestração de eventos (fiz no lab de observabilidade)
+- **QuickSight** — dashboards na AWS (próximo passo)
+
+## Status
+
+- [x] Pipeline Medallion no Snowflake
+- [x] SQL de transformação (Bronze → Silver → Gold)
+- [x] Dashboard no Power BI com KPIs de negócio
+- [x] Documentação técnica completa
+- [ ] Migrar para AWS (S3 → Lambda → RDS → QuickSight)
+- [ ] Automatizar com EventBridge e IAM roles
+
+## Tecnologias Utilizadas
 - **Snowflake:** Armazenamento e processamento de dados em nuvem.
 - **SQL:** Limpeza, transformação e modelagem dos dados.
 - **Power BI:** Visualização de dados e criação de dashboards.
 
-## 🏗️ Arquitetura do Projeto
+## Arquitetura do Projeto
 - **Camada Bronze:** Ingestão dos dados brutos.
 - **Camada Silver:** Limpeza e padronização.
 - **Camada Gold:** Modelagem dimensional e criação de views analíticas.
 
-## 📊 KPIs de Negócio
+## KPIs de Negócio
 O projeto foca em indicadores operacionais:
 - Volume de Pedidos por Mês.
 - Distribuição Geográfica de Clientes por Estado.
 - ![Dashboard Olist](dashboard_olist.png)
 
-## 📂 Organização dos Arquivos
-- `01_Criação_Camadas_Bronze_Silver.sql`: Scripts de preparação dos dados.
-- `02_Criação_Camada_Gold.sql`: Criação das tabelas consolidadas e da View analítica.
-- `03_Consultas_e_Analises.sql`: Consultas de exploração e verificação.
-- Markdown
----
+
+
+### 🌐 Contato
+
+- 💼 **LinkedIn:** [linkedin.com/in/eliana-diniz](https://www.linkedin.com/in/eliana-diniz)
+- 📧 **E-mail:** [eliana.dinizsilva@gmail.com](mailto:eliana.dinizsilva@gmail.com)
+- 🐙 **GitHub:** [github.com/Dinizasilva](https://github.com/Dinizasilva)
+
+
+> *"Eu comecei limpando CSV no Snowflake. Hoje eu provisiono buckets no S3. O pipeline é o mesmo. Só mudou onde ele roda. E quem manda nele."*
 
 ### 📄 Documentação Técnica
 Para uma visão detalhada da arquitetura, modelagem dimensional e KPIs aplicados, acesse o documento abaixo:
 [📥 Visualizar Portfólio Técnico - Olist](Portfolio_Projeto_Olist_v2.pdf)
 
----
 *Projeto desenvolvido por Eliana Diniz Araújo e Silva como parte da construção de um portfólio de dados.*
