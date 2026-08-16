@@ -23,7 +23,7 @@ Esse foi meu **primeiro projeto de dados**. Eu tinha nível intermediário em co
 ## A arquitetura (como eu construí)
 
 <p align="center">
-  <img src="architecture-olist-medallion-pipeline.png" alt="Arquitetura de Dados Olist - Pipeline Medallion e Power BI" width="800%">
+  <img src="architecture-olist-medallion-pipeline.png" alt="Arquitetura de Dados Olist - Pipeline Medallion e Power BI" width="700%">
 </p>
 
 ### O que cada camada faz
@@ -64,8 +64,10 @@ Esse foi meu **primeiro projeto de dados**. Eu tinha nível intermediário em co
 - **Tempo Médio de Entrega** — performance logística
 - **Top Categorias de Produtos** — o que mais vende
 
-*(Prints do Power BI na pasta `/images`)*
 
+<p align="center">
+  <img src="dashboard-olist-analytics.png" alt="Dashboard Olist e KPIs de Vendas" width="700">
+</p>
 ---
 
 ## O que esse projeto me ensinou (e que uso hoje na Cloud)
@@ -82,11 +84,16 @@ Esse foi meu **primeiro contato** com pipeline de dados. Na época eu não sabia
 
 ---
 
-## 🚀 Versão Cloud — Onde eu quero levar isso
+## Versão Cloud — Onde eu quero levar isso
 
 Esse pipeline hoje está no Snowflake. Mas eu já sei como fazer isso na AWS. E vou fazer.
 
-## 🎯 Objetivo
+
+### Arquitetura futura na AWS:
+
+
+
+## Objetivo
 Este projeto foi desenvolvido para demonstrar habilidades em engenharia e análise de dados, utilizando a arquitetura **Medallion** (Bronze, Silver, Gold) para processar dados de e-commerce e gerar indicadores de negócio (KPIs).
 
 ## 🛠️ Tecnologias Utilizadas
